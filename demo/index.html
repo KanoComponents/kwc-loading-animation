@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>kano-app-loader demo</title>
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+
+        <script type="module" src="../../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
+        <script type="module" src="../../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
+        <script type="module" src="../kwc-loading-animation.js"></script>
+
+        <script type="module">
+            const $_documentContainer = document.createElement('template');
+            
+            $_documentContainer.innerHTML = `<custom-style>
+                <style is="custom-style" include="demo-pages-shared-styles">
+                    demo-snippet {
+                        --demo-snippet-demo: {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        };
+                    }
+                    button {
+                        margin-top: 12px;
+                    }
+                </style>
+            </custom-style>`;
+            
+            document.body.appendChild($_documentContainer.content);
+        </script>
+    </head>
+    <body unresolved>
+        <div class="vertical-section-container centered">
+        <h3>Basic usage</h3>
+        <demo-snippet>
+            <template>
+                <kano-app-loader></kano-app-loader>
+            </template>
+        </demo-snippet>
+        <h3>Bigger</h3>
+        <demo-snippet>
+            <template>
+                <kano-app-loader pip-size="23"></kano-app-loader>
+            </template>
+        </demo-snippet>
+        <h3>Don't start right away</h3>
+        <demo-snippet>
+            <template>
+                <kano-app-loader no-auto-start></kano-app-loader>
+            </template>
+        </demo-snippet>
+    </body>
+</html>

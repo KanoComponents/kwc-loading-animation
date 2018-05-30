@@ -1,0 +1,14 @@
+{
+  "name": "@kano/kwc-loading-animation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@kano/loading-animation": "^1.0.0",
+    "@polymer/polymer": "^3.0.2"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@webcomponents/webcomponentsjs": "^2.0.0"
+  }
+}
