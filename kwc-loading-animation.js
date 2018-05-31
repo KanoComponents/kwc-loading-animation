@@ -3,7 +3,7 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import { LoadingAnimation } from '@kano/loading-animation/index.js';
 
 class KWCAnimationLoader extends PolymerElement {
-    static get is() { return 'kano-app-loader'; }
+    static get is() { return 'kwc-loading-animation'; }
     static get template() {
         return html`
             <style>
