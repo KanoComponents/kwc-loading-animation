@@ -9,6 +9,10 @@ class KWCAnimationLoader extends PolymerElement {
             <style>
                 :host {
                     display: block;
+                    padding: 16px;
+                    background: #FFF;
+                    border-radius: 6px;
+                    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.15);
                 }
             </style>
         `;
@@ -17,7 +21,7 @@ class KWCAnimationLoader extends PolymerElement {
         return {
             pipSize: {
                 type: Number,
-                value: 9,
+                value: 6.4,
                 observer: '_inject'
             },
             noAutoStart: {
