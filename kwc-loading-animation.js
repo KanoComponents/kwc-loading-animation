@@ -18,16 +18,21 @@ class KWCAnimationLoader extends PolymerElement {
             pipSize: {
                 type: Number,
                 value: 9,
-                observer: '_inject'
+                observer: '_inject',
             },
             noAutoStart: {
                 type: Boolean,
                 value: false,
-            }
+            },
         };
     }
     connectedCallback() {
         super.connectedCallback();
+
+        /* Re-inject animation when re-connecting to DOM. */
+        if (!this._loader) {
+            this._inject();
+        }
     }
     _inject() {
         if (this._loader) {
@@ -39,13 +44,13 @@ class KWCAnimationLoader extends PolymerElement {
             this._loader.start();
         }
     }
-    start () {
+    start() {
         if (!this._loader) {
             return;
         }
         this._loader.start();
     }
-    stop () {
+    stop() {
         if (!this._loader) {
             return;
         }
@@ -54,7 +59,7 @@ class KWCAnimationLoader extends PolymerElement {
     disconnectedCallback() {
         super.disconnectedCallback();
         if (!this._loader) {
-            return
+            return;
         }
         this._loader.stop();
         this._loader.delete();
